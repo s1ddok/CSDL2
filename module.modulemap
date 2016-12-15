@@ -1,39 +1,41 @@
 module CSDL2 [system] {
-	header "/usr/include/SDL2/SDL.h"
-	header "SDL2_generated_constants.h"
-	link "SDL2"
-  export *
+    header "/usr/include/SDL2/SDL.h"
+    // This is needed for SwiftBGFX
+    header "/usr/include/SDL2/SDL_syswm.h"
+    link "SDL2"
+    export *
 
-    module gfx {
-    	header "/usr/include/SDL2/SDL2_gfxPrimitives.h"
-    	header "/usr/include/SDL2/SDL2_rotozoom.h"
-    	header "/usr/include/SDL2/SDL2_framerate.h"
-    	header "/usr/include/SDL2/SDL2_imageFilter.h"
-    	link "SDL2_gfx"
-    	export *
+    // We do not make any of use of these in Fiber2D yet.
+    /*module gfx {
+        header "/usr/include/SDL2/SDL2_gfxPrimitives.h"
+        header "/usr/include/SDL2/SDL2_rotozoom.h"
+        header "/usr/include/SDL2/SDL2_framerate.h"
+        header "/usr/include/SDL2/SDL2_imageFilter.h"
+        link "SDL2_gfx"
+        export *
     }
 
     module image {
-    	header "/usr/include/SDL2/SDL_image.h"
-    	link "SDL2_image"
-    	export *
+        header "/usr/include/SDL2/SDL_image.h"
+        link "SDL2_image"
+        export *
     }
 
     module mixer {
-    	header "/usr/include/SDL2/SDL_image.h"
-    	link "SDL2_mixer"
-    	export *
+        header "/usr/include/SDL2/SDL_image.h"
+        link "SDL2_mixer"
+        export *
     }
 
     module net {
-    	header "/usr/include/SDL2/SDL_net.h"
-    	link "SDL2_net"
-    	export *
+        header "/usr/include/SDL2/SDL_net.h"
+        link "SDL2_net"
+        export *
     }
 
     module ttf {
-    	header "/usr/include/SDL2/SDL_ttf.h"
-    	link "SDL2_ttf"
-    	export *
-    }
+        header "/usr/include/SDL2/SDL_ttf.h"
+        link "SDL2_ttf"
+        export *
+    }*/
 }
