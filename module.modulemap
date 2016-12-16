@@ -1,7 +1,8 @@
 module CSDL2 [system] {
-    header "/usr/include/SDL2/SDL.h"
+    header "shim.h"
+    //header "/usr/include/SDL2/SDL.h"
     // This is needed for SwiftBGFX
-    header "/usr/include/SDL2/SDL_syswm.h"
+    //header "/usr/include/SDL2/SDL_syswm.h"
     link "SDL2"
     export *
 
